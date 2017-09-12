@@ -1,0 +1,36 @@
+.company {
+
+	/* Section - Main screen */
+	.main-screen {
+		background: #fff url("../images/main-screen_company_bg.jpg") center top/cover no-repeat;
+
+		@include desktop {
+			-webkit-background-size: auto 130%;
+			background-size: auto 130%;
+		}
+
+		&__container {
+			padding-top: 130px;
+			padding-bottom: 75px;
+
+			@include phones {
+				padding-top: 110px;
+				padding-bottom: 50px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 25px;
+		}
+	}
+
+	/* Section - Reason */
+	.reason {
+		padding-bottom: 80px;
+	}
+
+	/* Section Product */
+	.product {
+		padding-bottom: 75px;
+	}
+}

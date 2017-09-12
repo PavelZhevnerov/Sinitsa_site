@@ -1,0 +1,109 @@
+/* =================================
+		       HEADER
+================================= */
+
+.main-header {
+   padding-bottom: 13px;
+
+   &__content {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include tablets {flex-wrap: wrap;}
+
+      @media screen and (max-width: 540px) {flex-direction: column;}
+   }
+}
+
+
+.logo {
+   margin-left: -43px;
+   margin-right: 15px;
+
+   @include laptop {margin-left: -15px;}
+
+   @media screen and (max-width: 540px) {margin: 0 auto 7px;}
+
+   &__link {
+      display: inline-block;
+      &:hover {opacity: .8;}
+   }
+
+   &__pic {
+      display: inline-block;
+      width: 309px;
+
+      @media screen and (max-width: 540px) {width: 280px;}
+   }
+}
+
+
+.company-descr {
+   margin-right: 15px;
+   max-width: 300px;
+   line-height: 1.2;
+
+   @include laptop {
+      max-width: 240px;
+      font-size: rem(14px);
+   }
+
+   @include tablets {
+      max-width: 100%;
+      width: 100%;
+      order: 1;
+      margin: 10px auto 0;
+      text-align: center;
+   }
+
+   p {
+      margin-bottom: 0;
+
+      @include tablets {
+         max-width: 240px;
+         margin: 0 auto;
+      }
+   }
+}
+
+
+.call {
+   width: 24%;
+   font-family: "Qanelas-SemiBold";
+   text-align: center;
+
+   @include laptop {width: 26%;}
+
+   @include tablets {width: auto;}
+
+   @media screen and (max-width: 540px) {margin-bottom: 7px;}
+
+   &__text {
+      font-size: rem(14px);
+      span {color: $accent;}
+
+      @include laptop {font-size: rem(12px);}
+
+      @include tablets {display: none;}
+   }
+
+   &__phone {
+      font-size: rem(25px);
+      font-family: "Qanelas-Regular";
+      text-decoration: none;
+      color: $font-color;
+      &:hover {opacity: .7;}
+
+      @include laptop {font-size: rem(20px);}
+   }
+
+   &__btn {
+      height: 35px;
+      line-height: 35px;
+      font-size: rem(18px);
+
+      @include laptop {font-size: rem(16px);}
+   }
+}

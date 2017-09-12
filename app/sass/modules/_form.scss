@@ -1,0 +1,283 @@
+/* =================================
+              FORM
+================================= */
+
+.form {
+	background-color: #fff;
+	padding: 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-around;
+
+	&_quicl-sketch {
+		@extend .border-decor_dark;
+
+		@media screen and (max-width: 640px) {
+			justify-content: center;
+		}
+
+		.form__field {
+			flex-basis: 33%;
+
+			@include laptop {
+				flex-basis: 30%;
+			}
+
+			/*@include tablets {
+				flex-basis: 28%;!*+*!
+			}*/
+
+			@media screen and (max-width: 640px) {
+				flex-basis: 45%;/*+*/
+				margin: 5px;/*+*/
+			}
+
+			@include phones {
+				flex-basis: 90%;
+				/*+*/
+			}
+		}
+
+		.form__button {
+			@include laptop {
+				flex-basis: 30%;
+			}
+
+			/*@include tablets {
+				flex-basis: 28%;!*+*!
+			}*/
+
+			@media screen and (max-width: 640px) {
+				flex-basis: 45%;/*+*/
+				margin: 5px;/*+*/
+			}
+
+			@include phones {
+				flex-basis: 90%;
+				/*+*/
+			}
+		}
+	}
+
+	&_free-model {
+		@extend .border-decor_light;
+
+		@include laptop {
+			justify-content: center;
+		}
+
+		.form__field {
+			flex-basis: 23%;
+
+			@include laptop {
+				flex-basis: 35%;
+				margin: 5px;
+			}
+
+			@include tablets {
+				flex-basis: 40%;/*+*/
+			}
+
+			@media screen and (max-width: 640px) {
+				flex-basis: 45%;/*+*/
+			}
+
+			@include phones {
+				flex-basis: 90%;
+			}
+		}
+
+		.form__button {
+			@include laptop {
+				flex-basis: 35%;
+				margin: 5px;
+			}
+
+			@include tablets {
+				flex-basis: 40%;/*+*/
+			}
+
+			@media screen and (max-width: 640px) {
+				flex-basis: 45%;/*+*/
+			}
+
+			@include phones {
+				flex-basis: 90%;
+				margin: 5px;
+			}
+		}
+	}
+
+	&__heading {
+		font-size: rem(30px);
+		line-height: 1.2;
+		font-family: "Qanelas-Bold";
+		@extend .align-center;
+		margin-bottom: 10px;
+		flex-basis: 100%;
+
+		@include laptop {
+			font-size: rem(26px);
+		}
+	}
+
+	&__text {
+		font-size: rem(18px);
+		line-height: 1.2;
+		font-family: "Qanelas-SemiBold";
+		@extend .align-center;
+		margin-bottom: 25px;
+		flex-basis: 100%;
+
+		@include tablets {
+			font-size: rem(16px);
+		}
+	}
+
+	&__field {
+		position: relative;
+
+		&_name {
+			.form__label {
+				background: $yellow url("../images/icon_avatar.png") center center no-repeat;
+			}
+		}
+
+		&_phone {
+			.form__label {
+				background: $yellow url("../images/icon_phone-call.png") center center no-repeat;
+			}
+		}
+
+		&_sport {
+			.form__label {
+				background: $yellow url("../images/icon_trophy.png") center center no-repeat;
+			}
+		}
+	}
+
+	&__input {
+		display: inline-block;
+		outline: none;
+		height: 52px;
+		line-height: 52px;
+		width: 100%;
+		border: 1px solid #d7d7d7;
+		border-radius: 5px;
+		padding: 0 5px 0 55px;
+		position: relative;
+
+		@include tablets {
+			padding: 0 5px 0 45px;/*+*/
+		}
+
+		@media screen and (max-width: 640px) {
+			padding: 0 5px 0 40px;/*+*/
+		}
+	}
+
+	&__label {
+		position: absolute;
+		height: 52px;
+		width: 35px;
+		border-radius: 5px;
+		background-color: $yellow;
+		cursor: pointer;
+		z-index: 1;
+	}
+
+	&__button {
+		font-size: rem(20px);
+
+		@include laptop {
+			padding: 0 15px;
+		}
+
+		@include tablets {
+			padding: 0 10px;/*+*/
+			font-size: rem(18px);/*+*/
+		}
+	}
+
+	&__text_add {
+		font-size: rem(14px);
+		line-height: 1.2;
+		font-family: "Qanelas-Medium";
+		@extend .align-center;
+		margin-top: 25px;
+		flex-basis: 100%;
+	}
+
+	input::-webkit-input-placeholder {color: $font-color;}
+	input::-moz-placeholder          {color: $font-color;}
+	input:-moz-placeholder           {color: $font-color;}
+	input:-ms-input-placeholder      {color: $font-color;}
+
+	@include tablets {
+		padding: 30px 25px;/*+*/
+	}
+
+	@include phones {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+
+/*.form {
+	position: relative;
+}
+
+.popup-form {
+	background: white;
+	padding: 20px 30px;
+	text-align: left;
+	max-width: 400px;
+	margin: 40px auto;
+	position: relative;
+}
+
+.form__title {
+	text-align: center;
+	margin-bottom: 18px;
+}
+
+.form__box,
+.form__input {
+	display: block;
+	width: 100%;
+	outline: none;
+}
+
+.form__box {
+	margin-bottom: 15px;
+}
+
+.form__input {
+	border-width: 2px;
+	padding-left: 15px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.success {
+	position: absolute;
+	display: none;
+	align-items: center;
+	padding: 30px;
+	top: 0;
+	left: 0;
+	max-width: 400px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 22px;
+	background: #fff;
+	z-index: 2;
+	text-transform: uppercase;
+}
+
+.success.visible {
+	display: flex;
+}*/

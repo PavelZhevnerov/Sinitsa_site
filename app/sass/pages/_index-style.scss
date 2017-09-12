@@ -1,0 +1,83 @@
+.main-page {
+
+	/* Section - Main screen */
+	.main-screen {
+		background: #fff url("../images/main-screen_bg_crop.png") center center/cover no-repeat;
+
+		&__container {
+			padding-top: 210px;
+			padding-bottom: 290px;
+
+			@include laptop {
+				padding-top: 195px;
+				padding-bottom: 210px;
+			}
+
+			@include tablets {
+				padding-top: 180px;
+				padding-bottom: 140px;
+			}
+
+			@include phones {
+				padding-top: 100px;
+				padding-bottom: 0;
+			}
+		}
+
+		&__form {
+			position: absolute;
+			top: 77%;/*+*/
+			left: 10px;
+			right: 10px;
+
+			@include laptop {
+				top: 83%;/*+*/
+			}
+
+			@include tablets {
+				top: 93%;/*+*/
+			}
+
+			@include phones {
+				position: static;
+			}
+		}
+	}
+
+	.customers {
+		@include laptop {
+			padding-top: 200px;
+		}
+
+		@include tablets {
+			padding-top: 260px;
+			padding-bottom: 40px;
+		}
+
+		@media screen and (max-width: 640px) {
+			padding-top: 350px;/*+*/
+		}
+
+		@include phones {
+			padding-top: 50px;
+		}
+	}
+
+	/* Section - Product */
+	.product {
+
+		&__form {
+			margin-bottom: 70px;
+
+			@include tablets {
+				margin-bottom: 50px;
+			}
+
+			@include phones {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	/*+*/
+}
+

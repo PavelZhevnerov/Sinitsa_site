@@ -1,0 +1,2226 @@
+//Custom Styles Here
+html {
+	font-size: $fz;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	min-width: 320px;
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+	font-family: "Qanelas-Medium", sans-serif;
+	line-height: 1.42;
+	color: $font-color;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Qanelas-SemiBold";
+	font-weight: normal;
+	margin: 0 0 5px;
+}
+
+h1 {
+	font-size: rem(41px);
+}
+
+h2 {
+	font-size: rem(37px);
+}
+
+h3 {
+	font-size: rem(33px);
+}
+
+h4 {
+	font-size: rem(29px);
+}
+
+h5 {
+	font-size: rem(25px);
+}
+
+h6 {
+	font-size: rem(20px);
+}
+
+p {
+	margin: 0 0 5px;
+}
+
+a {
+	color: #161715;
+	transition: all .3s ease;
+	&:hover,
+	&:focus,
+	&:active {
+		color: inherit;
+		outline: none;
+		text-decoration: none;
+	}
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+strong {
+	font-family: "Qanelas-Bold";
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
+
+.hidden {
+	display: none;
+}
+
+section {
+	position: relative;
+}
+
+/* main title */
+.section-title {
+	font-size: rem(54px);
+	line-height: 1.2;
+	color: #fff;
+	font-family: "Qanelas-SemiBold";
+	margin-bottom: 60px;
+	padding: 0 50px;
+	@extend .align-center;
+
+	@include desktop {
+		font-size: rem(47px);
+	}
+
+	@include laptop {
+		font-size: rem(40px);
+	}
+
+	@media screen and (max-width: 640px) {
+		font-size: rem(32px);/*+*/
+	}
+
+	@include phones {
+		font-size: rem(24px);
+		margin-bottom: 30px;
+		padding: 0 20px;
+	}
+
+	&_name {/*+*/
+		font-family: "Qanelas-Regular";
+	}
+}
+
+/* subtitle */
+.section-subtitle {
+	color: #fff;
+	font-size: rem(44px);
+	line-height: 1.2;
+	font-family: "Qanelas-Medium";
+	margin-bottom: 60px;
+	padding: 0 50px;
+	@extend .align-center;
+	
+	&_dark {
+		color: #383937;
+		@extend .section-subtitle;
+	}
+
+	@include laptop {
+		font-size: rem(42px);
+	}
+
+	@include tablets {
+		font-size: rem(40px);
+	}
+
+	@media screen and (max-width: 640px) {
+		font-size: rem(32px);/*+*/
+	}
+
+	@include phones {
+		font-size: rem(24px);
+		margin-bottom: 30px;
+		padding: 0 20px;
+	}
+}
+
+.text-decor {
+	&_light {
+		color: $yellow;
+	}
+
+	&_dark {
+		color: $accent;
+	}
+}
+
+.border-decor {
+	&_light {
+		border: 10px solid $yellow;
+	}
+
+	&_dark {
+		border: 10px solid $accent;
+	}
+
+	&_gray {/*+*/
+		border:10px solid #d7d7d7;
+	}
+}
+
+/* buttons */
+.btn,
+.button {
+	position: relative;
+	display: inline-block;
+	padding: 0 30px;
+	height: 52px;
+	line-height: 52px;
+	font-size: rem(20px);
+	font-family: "Qanelas-SemiBold";
+	color: #fffffe;
+	background-color: #f38b97;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	outline: none;
+	border: none;
+
+	&:hover, &:focus, &:active {
+		color: #fff;
+		text-decoration: none;
+		background-color: darken(#f38b97, 10%);
+	}
+
+	&_catalog {/*+*/
+		@include tablets {
+			font-size: rem(18px);
+		}
+
+		@media screen and (max-width: 640px) {
+			padding: 0 15px;
+			height: 44px;
+			line-height: 44px;
+		}
+
+		@include phones {
+			position: static;
+			transform: none;
+			height: 37px;
+			line-height: 37px;
+			font-size: rem(16px);
+		}
+	}
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* preloader */
+.loader {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background: none repeat scroll 0 0 #ffffff;
+	z-index: 9999;
+}
+
+.loader-inner {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff url("../images/preloader.gif") no-repeat center center;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+/* footer to bottom */
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+/* layer over images background */
+.dark-layer {
+	position: relative;
+
+	&::before {
+		content:'';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.65);
+	}
+
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.light-layer {
+	position: relative;
+
+	&::before {
+		content:'';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.88);
+	}
+
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+/* Section - Main screen */
+.main-screen {
+	&__container {
+		@extend .align-center;/*+*/
+		padding-top: 165px;
+		padding-bottom: 140px;
+
+		@include tablets {
+			padding-top: 115px;
+			padding-bottom: 35px;
+		}
+
+		@include phones {
+			padding-top: 150px;
+			padding-bottom: 80px;
+		}
+	}
+
+	&__info {/*+*/
+		font-size: rem(24px);
+		line-height: 1.2;
+		font-family: "Qanelas-Medium";
+		color: #fff;
+		@extend .align-center;
+		width: 70%;
+		margin: 0 auto 60px auto;
+
+		@include tablets {
+			font-size: rem(20px);
+			width: 85%;
+			margin: 0 auto 20px auto;
+		}
+
+		@include phones {
+			font-size: rem(16px);
+		}
+	}
+}
+
+.point-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+
+	@include phones {
+		flex-wrap: wrap;
+		margin-bottom: 50px;
+	}
+}
+
+.point {
+	&__item {
+		flex-basis: 23%;
+
+		@include laptop {
+			flex-basis: 25%;
+		}
+
+		@include phones {
+			flex-basis: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: 15px;
+		}
+
+		&:last-child {
+			@include phones {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__img-wrap {
+		height: 125px;
+		background: transparent url("../images/item-point.png") center top/auto 100% no-repeat;/*+*/
+		overflow: hidden;
+		position: relative;
+
+		@media screen and (max-width: 640px) {
+			height: 100px;/*+*/
+		}
+
+		@include phones {
+			flex-shrink: 0;
+			height: 56px;
+			width: 46px;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+			margin: 0 15px;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@media screen and (max-width: 640px) {
+			top: 15px;/*+*/
+			transform: translateX(-50%) scale(0.8);/*+*/
+		}
+
+		@include phones {
+			top: -2px;
+			transform: translateX(-50%) scale(0.5);
+		}
+
+		&_schedule {
+			left: 51%;
+			top: 25px;
+
+			@media screen and (max-width: 640px) {
+				top: 15px;
+				left: 52%;
+			}
+
+			@include phones {
+				top: 0;
+			}
+		}
+
+		&_wallet {/*+*/
+			top: 30px;
+
+			@media screen and (max-width: 640px) {
+				top: 22px;
+				left: 51%;
+			}
+
+			@include phones {
+				top: 5px;
+			}
+		}
+
+		&_user-group {/*+*/
+			top: 30px;
+
+			@media screen and (max-width: 640px) {
+				top: 20px;
+				left: 51%;
+			}
+
+			@include phones {
+				top: 3px;
+			}
+		}
+	}
+
+	&__desc {
+		font-size: rem(24px);
+		color: #fff;
+		line-height: 1.2;
+		font-family: "Qanelas-Medium";
+		@extend .align-center;
+		margin: 20px 0 0;
+
+		@include laptop {
+			font-size: rem(22px);
+		}
+
+		@include tablets {
+			font-size: rem(20px);
+		}
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(18px);/*+*/
+		}
+
+		@include phones {
+			font-size: rem(16px);
+			margin: 0;
+			text-align: left;
+		}
+	}
+}
+
+
+/* Section - Customers */
+.customers {
+	padding-top: 150px;
+	padding-bottom: 50px;
+	background: #fff url("../images/customers_bg.png") center center/cover no-repeat;
+}
+
+.circle-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.circle {
+	&__item {
+		flex-basis: 0;
+		flex-shrink: 0;
+		margin-bottom: 40px;
+
+		@include laptop {
+			flex-basis: 30%;
+		}
+
+		@include tablets {
+			margin-bottom: 30px;
+			padding: 0 10px;/*+*/
+			flex-basis: 40%;/*+*/
+		}
+
+		@media screen and (max-width: 640px) {
+			flex-basis: 45%;/*+*/
+		}
+
+		@include phones {
+			flex-basis: 50%;/*+*/
+			padding: 0 5px;/*+*/
+		}
+	}
+
+	&__img-wrap {
+		width: 260px;
+		height: 260px;
+		border-radius: 50%;
+		background-color: $yellow;
+		margin: 0 auto;
+
+		@include laptop {
+			width: 230px;
+			height: 230px;
+		}
+
+		@include tablets {
+			width: 210px;
+			height: 210px;
+		}
+
+		@media screen and (max-width: 640px) {
+			width: 170px;/*+*/
+			height: 170px;/*+*/
+		}
+
+		@include phones {
+			width: 125px;
+			height: 125px;
+		}
+	}
+
+	&__img {
+		display: inline-block;
+		line-height: 0;
+		width: 90%;
+		height: 90%;
+		border-radius: 50%;
+		background-color: #fff;
+		margin-top: 8%;
+		margin-left: 2%;
+	}
+
+	&__desc {
+		font-size: rem(20px);
+		color: #fff;
+		line-height: 1.2;
+		font-family: "Qanelas-Medium";
+		@extend .align-center;
+		margin: 20px 0 0;
+
+		@include laptop {
+			font-size: rem(18px);
+		}
+
+		@include tablets {
+			font-size: rem(16px);
+		}
+
+		@include phones {
+			font-size: rem(14px);
+		}
+	}
+}
+
+
+/* Section - Product */
+.product {
+	padding-top: 80px;
+	padding-bottom: 20px;
+	background: #fff url("../images/repeat_bg.png") center center repeat;
+
+	@include laptop {
+		padding-top: 60px;
+	}
+
+	@include tablets {
+		padding-top: 40px;
+	}
+
+	@include phones {
+		padding-top: 0;
+	}
+}
+
+.goods-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+
+	@include tablets {
+		justify-content: space-around;
+	}
+
+	@include phones {
+		justify-content: center;
+	}
+}
+
+.goods {
+	&__item {
+		flex-basis: 45%;
+		background-color: #fff;
+		padding-bottom: 72px;
+		@extend .align-center;
+		margin-bottom: 55px;
+		position: relative;
+		-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
+		-moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, 0.09);
+		box-shadow:         0px 0px 10px 0px rgba(0, 0, 0, 0.09);
+
+		@include phones {
+			flex-basis: 90%;
+			padding-bottom: 15px;
+			margin-bottom: 25px;
+		}
+	}
+
+	&__img-wrap {
+		height: 229px;
+		overflow: hidden;
+
+		@include laptop {
+			height: 200px;
+		}
+
+		@include tablets {
+			height: 176px;
+		}
+	}
+
+	&__img {
+		display: inline-block;
+		width: 100%;/*+*/
+		height: 100%;/*+*/
+		object-fit: cover;/*+*/
+	}
+
+	&__heading {
+		font-size: rem(20px);
+		color: #fff;
+		line-height: 1.2;
+		font-family: "Qanelas-SemiBold";
+		@extend .align-center;
+		margin: 0;
+		padding: 20px;
+		background-color: $accent;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 48px;
+			height: 32px;
+			background: transparent url("../images/leaf.png") center bottom no-repeat;
+			bottom: 97%;
+			right: 7%;
+		}
+
+		@include laptop {
+			font-size: rem(18px);
+			padding: 20px 15px;
+		}
+
+		@include tablets {
+			font-size: rem(16px);
+		}
+	}
+
+	&__desc {
+		font-size: rem(18px);
+		color: $font-color;
+		line-height: 1.2;
+		font-family: "Qanelas-SemiBold";
+		@extend .align-center;
+		margin: 0;
+		padding: 25px 20px;
+
+		@include laptop {
+			font-size: rem(16px);
+		}
+
+		@include tablets {
+			font-size: rem(14px);
+			line-height: 1.3;
+		}
+
+		@media screen and (max-width: 640px) {
+			padding: 20px 15px;/*+*/
+		}
+
+		@include phones {
+			padding: 15px 10px;/*+*/
+		}
+
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include laptop {
+			font-size: rem(18px);
+		}
+
+		@include tablets {
+			font-size: rem(16px);
+			padding: 0 20px;/*+*/
+		}
+
+		@media screen and (max-width: 640px) {
+			padding: 0 15px;/*+*/
+			height: 44px;/*+*/
+			line-height: 44px;/*+*/
+		}
+
+		@include phones {
+			position: static;
+			transform: none;
+			height: 37px;
+			line-height: 37px;
+			font-size: rem(14px);
+			padding: 0 10px;/*+*/
+		}
+	}
+}
+
+
+/* Section - Cooperation info */
+.cooperation {
+	background: #fff url("../images/cooperation_bg.png") center top/cover no-repeat;/*+*/
+
+	&__info {
+		font-size: rem(40px);
+		line-height: 1.2;
+		font-family: "Qanelas-SemiBold";
+		@extend .align-center;
+		padding-top: 100px;
+		padding-bottom: 115px;
+		margin: 0;
+
+		@include laptop {
+			padding: 80px 0;
+		}
+
+		@include tablets {
+			padding: 60px 0;
+		}
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(32px);/*+*/
+		}
+
+		@include phones {
+			font-size: rem(24px);
+			padding: 45px 0;
+		}
+	}
+}
+
+
+/* Section - Reasons */
+.reason {
+	padding-top: 90px;
+	padding-bottom: 100px;
+	background: #fff url("../images/reason_bg.png") center bottom/cover no-repeat;
+
+	@include phones {
+		padding-top: 40px;
+		padding-bottom: 60px;
+	}
+
+	.container {/*+*/
+		@extend .align-center;
+	}
+
+	.button_catalog {/*+*/
+		margin-top: 35px;
+	}
+}
+
+.figure-list {/*+*/
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.figure {/*+*/
+
+	&__item {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: flex-start;
+		margin-bottom: 30px;
+
+		&_text-left {
+			justify-content: flex-end;
+
+			.figure__img-wrap {
+				order: 1;
+				margin-left: 40px;
+				margin-right: 0;
+
+				&::before {
+					transform: translate(-50%, -50%) scaleX(-1) rotate(30deg);
+				}
+
+				@include phones {
+					order: 0;
+					margin-left: 0;
+					margin-right: 20px;
+				}
+			}
+
+			.figure__desc {
+				order: 0;
+				padding-left: 15px;
+				padding-right: 0;
+
+				&::after {
+					bottom: -40px;
+					left: 95%;
+					transform: scaleX(-1);
+
+					@include tablets {
+						bottom: -25px;
+						right: -117px;
+					}
+
+					@media screen and (max-width: 640px) {
+						transform: scaleX(-1) scale(0.8);/*+*/
+						bottom: -15px;/*+*/
+					}
+
+					@include phones {
+						display: none;
+					}
+				}
+
+				@include phones {
+					order: 1;
+					padding-left: 0;
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			.reason__img-wrap::before {
+				transform: translate(-50%, -50%) rotate(30deg);
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include tablets {
+			justify-content: space-between;
+		}
+
+		@include phones {
+			justify-content: center;
+			align-items: flex-start;
+		}
+	}
+
+	&__img-wrap {
+		position: relative;
+		margin-right: 40px;
+		flex-shrink: 0;
+		position: relative;
+		width: 240px;
+		height: 240px;
+		display: flex;
+
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			background: transparent url("../images/reason_border.png") center center/cover no-repeat;
+		}
+
+		@media screen and (max-width: 640px) {
+			width: 175px;/*+*/
+			height: 175px;/*+*/
+		}
+
+		@include phones {
+			width: 110px;
+			height: 110px;
+			margin-right: 20px;
+			margin-top: -10px;
+		}
+	}
+
+	&__circle {
+		position: relative;
+		width: 65%;
+		height: 65%;
+		border-radius: 50%;
+		margin: auto;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;/* -- отключить на стр с портретами --*/
+	}
+
+	&__img {
+		display: block;
+
+		@media screen and (max-width: 640px) {
+			width: 70%;/*+*/
+			/*object-fit: contain;*//* -- включить на стр с портретами -- */
+		}
+	}
+
+	&__desc {
+		flex-basis: 62%;
+		position: relative;
+		padding-right: 15px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background: transparent url("../images/arrow.png") center center no-repeat;
+			width: 117px;
+			height: 22px;
+			bottom: -40px;
+			right: 100%;
+
+			@include tablets {
+				bottom: -25px;
+				left: -117px;
+			}
+
+			@media screen and (max-width: 640px) {
+				transform: scale(0.8);/*+*/
+				bottom: -15px;/*+*/
+			}
+
+			@include phones {
+				display: none;
+			}
+		}
+
+		@include tablets {
+			flex-basis: 58%;
+		}
+
+		@include phones {
+			flex-basis: 60%;
+			padding-right: 0;
+		}
+	}
+
+	&__heading {
+		font-size: rem(30px);
+		line-height: 1.2;
+		font-family: "Qanelas-SemiBold";
+		@extend .align-left;
+		margin-bottom: 20px;
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(23px);/*+*/
+			margin-bottom: 10px;/*+*/
+		}
+
+		@include phones {
+			font-size: rem(16px);
+			margin-bottom: 5px;
+		}
+	}
+
+	&__text {
+		font-size: rem(24px);
+		color: $font-color;
+		line-height: 1.2;
+		font-family: "Qanelas-Medium";
+		@extend .align-left;
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(19px);/*+*/
+		}
+
+		@include phones {
+			font-size: rem(14px);
+		}
+	}
+}
+
+/* Section - Feedback form */
+.feedback-form {
+	padding-top: 80px;
+	padding-bottom: 70px;
+	background: #fff url("../images/repeat_bg.png") center center repeat;
+
+	@include tablets {
+		padding-top: 65px;
+		padding-bottom: 50px;
+	}
+
+	@include phones {
+		padding-top: 0;
+		padding-bottom: 35px;
+	}
+}
+
+/* Section - Feedback info */
+.feedback {
+	background: transparent url("../images/feedback_bg.png") center center/cover no-repeat;
+}
+
+.feedback {
+	&__question {
+		font-size: rem(54px);
+		color: $font-color;
+		line-height: 1.0;
+		font-family: "Qanelas-SemiBold";
+		@extend .align-center;
+		padding: 25px 0;
+		background-color: $yellow;
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@media screen and (max-width: 640px) {
+				flex-wrap: wrap;/*+*/
+			}
+		}
+
+		@include laptop {
+			font-size: rem(52px);
+		}
+
+		@include tablets {
+			 font-size: rem(50px);
+		 }
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(40px);/*+*/
+		}
+
+		@include phones {
+			font-size: rem(30px);
+		}
+	}
+
+	&__link {
+		&_text {
+			@media screen and (max-width: 640px) {/*+*/
+				flex-basis: 100%;
+				margin-bottom: 10px;
+			}
+		}
+
+		&_question {
+			font-size: rem(24px);
+			line-height: 1.0;
+			text-decoration: underline;
+			padding-left: 50px;
+
+			@include laptop {
+				font-size: rem(22px);
+			}
+
+			@include tablets {
+				font-size: rem(20px);
+			}
+
+			@media screen and (max-width: 640px) {/*+*/
+				padding-left: 0;
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	&__info {
+		@extend .align-center;
+		padding-top: 40px;
+		padding-bottom: 55px;
+
+		@include phones {
+			padding-top: 25px;
+			padding-bottom: 40px;
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@media screen and (max-width: 640px) {/*+*/
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		@include phones {
+			justify-content: center;/*+*/
+		}
+	}
+
+	&__text {
+		font-size: rem(30px);
+		color: #fff;
+		line-height: 1.2;
+		font-family: "Qanelas-Medium";
+		@extend .align-center;
+		margin-bottom: 50px;
+		flex-basis: 100%;
+
+		@include laptop {
+			font-size: rem(28px);
+		}
+
+		@include tablets {
+			font-size: rem(26px);
+		}
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(23px);/*+*/
+		}
+
+		@include phones {
+			font-size: rem(20px);
+			margin-bottom: 25px;
+		}
+	}
+
+	&__btn {
+		font-size: rem(18px);
+		color: #fff;
+		line-height: 1.2;
+		font-family: "Qanelas-Medium";
+		@extend .align-center;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 35px;
+		border: 3px solid $yellow;
+		border-radius: 5px;
+		position: relative;
+		flex-basis: 30%;
+
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 23px;
+			height: 37px;
+			background: transparent url("../images/arrow_fb.png") center center no-repeat;
+			top: -50px;
+			left: 50%;
+
+			@include phones {
+				display: none;
+			}
+		}
+
+		&:nth-of-type(1){
+			@media screen and (max-width: 640px) {
+				order: 0;/*+*/
+			}
+
+			&::before {
+				width: 60px;
+				height: 26px;
+				background: transparent url("../images/arrow_fb-hor.png") center center no-repeat;
+				left: auto;
+				right: -20px;
+				top: -40px;
+
+				@media screen and (max-width: 640px) {
+					right: 10px;/*+*/
+				}
+
+				@include phones {
+					display: none;
+				}
+			}
+		}
+
+		&:nth-of-type(2){
+			border: 3px solid #a08744;
+
+			@media screen and (max-width: 640px) {
+				order: 2;/*+*/
+				margin-bottom: 0;/*+*/
+			}
+
+			@include phones {
+				order: 1;/*+*/
+				margin-bottom: 15px;/*+*/
+			}
+
+			&::before {
+				@media screen and (max-width: 640px) {
+					display: none;/*+*/
+				}
+			}
+		}
+
+		&:nth-of-type(3){
+			@media screen and (max-width: 640px) {
+				order: 1;/*+*/
+			}
+
+			@include phones {
+				order: 2;
+				margin-bottom: 0;/*+*/
+			}
+
+			&::before {
+				width: 60px;
+				height: 26px;
+				background: transparent url("../images/arrow_fb-hor.png") center center no-repeat;
+				left: -20px;
+				right: auto;
+				top: -40px;
+				transform: scaleX(-1);
+
+				@media screen and (max-width: 640px) {
+					left: 10px;/*+*/
+				}
+
+				@include phones {
+					display: none;
+				}
+			}
+		}
+
+		&:hover, &:focus, &:active {
+			border: 3px solid $yellow;
+			color: #fff;
+			text-decoration: none;
+			background-color: rgba(251,219,102,0.46);
+		}
+
+		@include laptop {
+			font-size: rem(17px);
+			padding: 15px 20px;
+		}
+
+		@include tablets {
+			font-size: rem(16px);
+			padding: 10px 15px;
+		}
+
+		@media screen and (max-width: 640px) {
+			flex-basis: 44%;/*+*/
+			margin-bottom: 15px;/*+*/
+		}
+
+		@include phones {
+			flex-basis: 70%;
+			/*+*/
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+/* Section - Product options *//*+*/
+.product-options {
+	background: #fff url("../images/repeat_bg.png") center center repeat;
+
+	&__container {
+		padding-top: 80px;
+		padding-bottom: 90px;
+
+		@include tablets {
+			padding-top: 30px;
+			padding-bottom: 60px;
+		}
+	}
+
+	&__title {
+		@include tablets {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__tiles {
+		height: 570px;
+		width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+
+		@include laptop {
+			height: 490px;
+		}
+
+		@include tablets {
+			height: 440px;
+		}
+
+		@media screen and (max-width: 640px) {
+			height: 340px;
+		}
+
+		@include phones {
+			height: 240px;
+		}
+	}
+}
+
+.tiles {
+
+	&__column {
+		flex-basis: 50%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		&_left {
+			margin-right: 10px;
+			overflow: hidden;
+
+			@media screen and (max-width: 640px) {
+				flex-basis: 65%;
+				margin-right: 7px;
+			}
+
+			@include phones {
+				flex-basis: 70%;
+				margin-right: 5px;
+			}
+		}
+
+		&_right {
+			margin-left: 10px;
+			overflow: hidden;
+
+			@media screen and (max-width: 640px) {
+				flex-basis: 35%;
+				margin-left: 7px;
+			}
+
+			@include phones {
+				flex-basis: 30%;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-basis: 66%;
+
+		&_top {
+			margin-bottom: 10px;
+			overflow: hidden;
+
+			@media screen and (max-width: 640px) {
+				margin-bottom: 7px;
+			}
+
+			@include phones {
+				margin-bottom: 5px;
+			}
+		}
+
+		&_bottom {
+			margin-top: 10px;
+			overflow: hidden;
+
+			@media screen and (max-width: 640px) {
+				margin-top: 7px;
+			}
+
+			@include phones {
+				margin-top: 5px;
+			}
+		}
+
+		&_half {
+			flex-basis: 50%;
+		}
+
+		&_third {
+			flex-basis: 33%;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.column {
+	&-full-width {
+		@media screen and (max-width: 640px) {
+			flex-basis: 100%;
+			margin-right: 0;
+		}
+	}
+
+	&-hidden {
+		@media screen and (max-width: 640px) {
+			display: none;
+		}
+	}
+}
+
+/* Section - This *//*+*/
+.this {
+	&__container {
+		padding-top: 60px;
+		padding-bottom: 30px;
+
+		@include tablets {
+			padding-top: 40px;
+			padding-bottom: 20px;
+		}
+	}
+
+	&__title {
+		font-family: "Qanelas-SemiBold";
+
+		@include tablets {
+			margin-bottom: 40px;
+		}
+
+		@include phones {
+			margin-bottom: 20px;
+		}
+
+		&_name {
+			font-size: rem(60px);
+			font-family: "Qanelas-Regular";
+
+			@media screen and (max-width: 640px) {
+				font-size: rem(50px);
+			}
+
+			@include phones {
+				font-size: rem(40px);
+			}
+		}
+	}
+}
+
+.description-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+
+	@include tablets {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.description {
+	&__item {
+		@extend .align-center;
+
+		&:last-child {
+			.description__title {
+				font-size: rem(140px);
+				line-height: 90px;
+
+				@media screen and (max-width: 640px) {
+					font-size: rem(120px);
+				}
+
+				@include phones {
+					font-size: rem(100px);
+				}
+			}
+		}
+
+		@include tablets {
+			flex-basis: 40%;
+		}
+
+		@include phones {
+			flex-basis: 45%;
+		}
+	}
+
+	&__title {
+		font-size: rem(90px);
+		color: $yellow;
+		line-height: 90px;
+		font-family: "Qanelas-Heavy", "Qanelas-Bold";
+		@extend .align-center;
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(75px);
+		}
+
+		@include phones {
+			font-size: rem(55px);
+		}
+	}
+
+	&__figure {
+		width: 160px;
+		height: 160px;
+		background-color: $yellow;
+		border-radius: 50%;
+		position: relative;
+		margin: 0 auto;
+
+		@media screen and (max-width: 640px) {
+			width: 130px;
+			height: 130px;
+		}
+
+		@include phones {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	&__text {
+		width: 95%;
+		height: 95%;
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translate(-50%,0);
+		border-radius: 50%;
+		background-color: #fff;
+		font-size: rem(18px);
+		color: $font-color;
+		line-height: 1.2;
+		font-family: "Qanelas-SemiBold";
+		@extend .align-center;
+		margin: 0;
+		padding: 0 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(14px);
+		}
+
+		@include phones {
+			font-size: rem(12px);
+		}
+
+	}
+}
+
+/* Section - Working process *//*+*/
+.working-process {
+	background: #fff url("../images/working-process_bg.jpg") center center/cover no-repeat;
+
+	&__container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+
+		@include tablets {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+	}
+
+	&__title {
+		@include tablets {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__info {
+		font-size: rem(20px);
+		color: #fff;
+		line-height: 1.2;
+		font-family: "Qanelas-Medium";
+		@extend .align-center;
+		margin-bottom: 40px;
+
+		@include tablets {
+			font-size: rem(18px);
+		}
+
+		@include phones {
+			font-size: rem(16px);
+		}
+	}
+
+	&__slider {
+		width: 100%;
+		padding-bottom: 75px;
+		/*height: 340px;*/
+
+		.slick-list,
+		.slick-track {
+			height: 265px;
+
+			@include laptop {
+				height: 230px;
+			}
+
+			@include tablets {
+				height: 200px;
+			}
+		}
+	}
+}
+
+.w-slider {
+	position: relative;
+
+	&__item {
+		margin: 0 10px;
+		overflow: hidden;
+		height: 100%;
+		outline: none;
+		cursor: pointer;
+	}
+
+	&__img {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&-counter {
+		.counter__num,
+		.counter__sep {
+			color: #fff;
+		}
+	}
+}
+
+.slider__btn {
+	position: absolute;
+	bottom: 0;
+	width: 118px;
+	height: 40px;
+	line-height: 40px;
+	@extend .align-center;
+	font-size: rem(14px);
+	color: $font-color;
+	font-family: "Qanelas-SemiBold";
+	background-color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+
+	@include phones {
+		width: 105px;
+	}
+
+	&_prev {
+		right: 50%;
+		transform: translate(-30%, 0);
+		padding-left: 32px;
+
+		.slider__btn-arrow {
+			left: 0;
+			border-radius: 5px 0 0 5px;
+
+			&::after {
+				left: 0;
+				border-color: transparent #fff transparent transparent;
+			}
+		}
+	}
+
+	&_next {
+		left: 50%;
+		transform: translate(30%, 0);
+		padding-right: 32px;
+
+		.slider__btn-arrow {
+			right: 0;
+			border-radius: 0 5px 5px 0;
+
+			&::after {
+				right: 0;
+				border-color: transparent transparent transparent #fff;
+			}
+		}
+	}
+
+	&-arrow {
+		display: block;
+		width: 32px;
+		height: 100%;
+		background-color: $yellow;
+		position: absolute;
+		top: 0;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 6px;
+			background-color: #fff;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 8px;
+		}
+	}
+}
+
+.counter {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%,0);
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__num,
+	&__sep {
+		font-size: rem(14px);
+		font-family: "Qanelas-SemiBold";
+		line-height: 40px;
+	}
+}
+
+/* Section - Souvenir-gift */
+.souvenir-gift {
+	background: #fff url("../images/souvenir-gift_bg.jpg") center center/cover no-repeat;
+
+	&__container {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		@extend .align-center;
+
+		@include phones {
+			padding-top: 60px;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__circle-list {
+		margin-bottom: 20px;
+
+		@include phones {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* Section - Reviews */
+.reviews {
+	background-color: #fff;
+	padding-top: 80px;
+	padding-bottom: 70px;
+
+	@include tablets {
+		padding-top: 60px;
+		padding-bottom: 55px;
+	}
+
+	@media screen and (max-width: 640px) {
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}
+
+	@include phones {
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
+
+	&__slider {
+		width: 100%;
+
+		.slick-list,
+		.slick-track {
+			height: 420px;
+
+			@include tablets {
+				height: auto;
+			}
+		}
+	}
+}
+
+.rw-slider {
+	position: relative;
+	@extend .border-decor_gray;
+
+	.rw-slider__item {
+		display: flex;
+		flex-wrap: nowrap;
+
+		@include phones {
+			flex-wrap: wrap;
+			align-content: flex-start;
+
+		}
+	}
+
+	&__item {
+		height: 100%;
+		outline: none;
+		cursor: pointer;
+		/*overflow: hidden;*/
+		padding: 50px 20px 65px;
+
+		@media screen and (max-width: 640px) {
+			padding: 40px 20px;
+		}
+
+		@include phones {
+			padding: 30px 20px;
+		}
+
+	}
+
+	&__user-info {
+		@include phones {
+			order: 1;
+			flex-basis: 100%;
+		}
+	}
+
+	.user-info {
+		&__wrap-img {
+			margin-bottom: 15px;
+			width: 185px;
+			overflow: hidden;
+			background-color: #333;
+
+			@media screen and (max-width: 640px) {
+				width: 150px;
+			}
+
+			@include phones {
+				display: none;
+			}
+		}
+
+		&__photo {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&__name,
+		&__city {
+			@extend .align-center;
+			font-size: rem(20px);
+			font-family: "Qanelas-SemiBold";
+			line-height: 1.2;
+			margin-bottom: 0;
+
+			@include phones {
+				text-align: left;
+				display: inline-block;
+				padding-right: 10px;
+			}
+		}
+	}
+
+	&__desc {
+		margin-left: 20px;
+
+		@media screen and (max-width: 640px) {
+			margin-left: 15px;
+		}
+
+		@include phones {
+			order: 0;
+			flex-basis: 100%;
+			margin-left: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__title {
+		@extend .text-decor_dark;
+		font-size: rem(30px);
+		font-family: "Qanelas-SemiBold";
+		line-height: 1.2;
+		margin-bottom: 25px;
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(28px);
+			margin-bottom: 20px;
+		}
+
+		@include phones {
+			font-size: rem(26px);
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		font-size: rem(18px);
+		font-family: "Qanelas-Medium";
+		line-height: 1.2;
+
+		@media screen and (max-width: 640px) {
+			font-size: rem(16px);
+		}
+	}
+
+	&-counter {
+		position: relative;
+		margin-top: 30px;
+
+		.counter__num,
+		.counter__sep {
+			color: $font-color;
+		}
+	}
+
+	.slider__btn {
+		bottom: -80px;
+		border: 1px solid #d6d6d6;
+		z-index: 2;
+	}
+
+	.slider__btn-arrow {
+		background-color: $accent;
+	}
+}
+
+/* Section - Stages *//*+*/
+.stages {
+	padding-top: 75px;
+	padding-bottom: 150px;
+
+	@include tablets {
+		padding-top: 60px;
+		padding-bottom: 100px;
+	}
+
+	@include phones {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+.figure__item_add {
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.figure {
+		&__desc {
+			@include laptop {
+				flex-basis: 53%;
+			}
+
+			@include tablets {
+				flex-basis: 45%;
+			}
+
+			@include phones {
+				flex-basis: 55%;
+			}
+
+			@media screen and (max-width: 400px) {
+				flex-basis: 46%;
+			}
+
+			&-add {
+				order: 2;
+				flex-basis: 70%;
+				margin-top: -90px;
+				padding-left: 15px;
+
+				@include laptop {
+					flex-basis: 75%;
+					margin-top: -40px;
+				}
+
+				@include tablets {
+					flex-basis: 90%;
+					margin-top: -20px;
+				}
+
+				@media screen and (max-width: 640px) {
+					flex-basis: 100%;
+					margin-top: 10px;
+					margin-bottom: 20px;
+				}
+
+				@include phones {
+					padding-left: 0;
+					margin-top: 0;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+.figure__desc-add {
+	margin-top: 15px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.desc-add {
+	&__item {
+		flex-basis: 50%;
+		display: flex;
+
+		@include phones {
+			align-items: center;
+		}
+	}
+
+	&__wrap-img {
+		width: 110px;
+		height: 110px;
+		border-radius: 50%;
+		flex-shrink: 0;
+
+		@media screen and (max-width: 640px) {
+			width: 80px;
+			height: 80px;
+		}
+
+		@include phones {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__text {
+		font-size: rem(14px);
+		font-family: "Qanelas-SemiBold";
+		line-height: 1.2;
+		margin-bottom: 0;
+		margin-left: 10px;
+		padding-right: 5px;
+
+		@include phones {
+			font-size: rem(12px);
+		}
+	}
+}
+
+/* Section - Master Class */
+.master-class {
+	background: #fff url("../images/master-class_bg.jpg") center center/cover no-repeat;
+	padding-top: 90px;
+	padding-bottom: 40px;
+
+	@include tablets {
+		padding-top: 60px;
+		padding-bottom: 20px;
+	}
+
+	@include phones {
+		padding-top: 40px;
+		padding-bottom: 10px;
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		@media screen and (max-width: 640px) {
+			justify-content: center;
+		}
+	}
+}
+
+.video-block {
+	margin-bottom: 50px;
+	flex-basis: 45%;
+
+	@include tablets {
+		margin-bottom: 40px;
+	}
+
+	@media screen and (max-width: 640px) {
+		flex-basis: 70%;
+	}
+
+	@include phones {
+		flex-basis: 80%;
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		font-size: rem(20px);
+		font-family: "Qanelas-Medium";
+		line-height: 1.2;
+		color: #fff;
+		margin-bottom: 15px;
+
+		@include laptop {
+			font-size: rem(18px);
+		}
+
+		@include tablets {
+			font-size: rem(16px);
+			margin-bottom: 10px;
+		}
+
+		@include phones {
+			font-size: rem(14px);
+		}
+	}
+
+	&__video-wrap {
+		background-color: #666;
+		height: 270px;
+
+		@include laptop {
+			height: 240px;
+		}
+
+		@include tablets {
+			height: 215px;
+		}
+
+		@media screen and (max-width: 640px) {
+			height: 230px;
+		}
+
+		@include phones {
+			height: 200px;
+		}
+	}
+
+	&__video {
+		width: 100%;
+		height: 100%;
+	}
+}

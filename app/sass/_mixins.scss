@@ -1,0 +1,57 @@
+@function rem($px) {
+  @return $px / $fz + 0rem;
+}
+
+// @include font("NameFont", "path");
+@mixin font($alias, $name) {
+  @font-face {
+	font-family: $alias;
+	src: url("../fonts/" + $name + ".eot");
+	src: url("../fonts/" + $name + ".woff2") format("woff2"),
+		   url("../fonts/" + $name + ".woff") format("woff"),
+		   url("../fonts/" + $name + ".ttf") format("truetype");
+	     @content;
+  }
+}
+
+// .block {
+// 	@include desktop {
+//		@content;
+// 	}
+// }
+@mixin desktop {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+@mixin phones {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+// @include placeholder(#000);
+@mixin placeholder($color: #000) {
+  &:-moz-placeholder,
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+	color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+// @extend .icon-name;

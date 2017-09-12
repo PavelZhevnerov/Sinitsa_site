@@ -1,0 +1,76 @@
+.our-product {
+
+	/* Section - Main screen */
+	.main-screen {
+		background: #fff url("../images/main-screen_our-product_bg.jpg") center top/cover no-repeat;
+
+		&__container {
+			padding-top: 120px;
+			padding-bottom: 50px;
+
+			@include phones {
+				padding-top: 110px;
+				padding-bottom: 40px;
+			}
+		}
+
+		&__title {
+			padding: 0;
+		}
+	}
+
+	.point-list {
+		@include phones {
+			margin-bottom: 0;
+		}
+	}
+
+	/* section Product */
+	.product {
+		.product__form {
+			margin-bottom: 70px;
+		}
+	}
+
+	/* Section - Souvenir-gift */
+	.circle {
+		&__item {
+			@include laptop {
+				flex-basis: 0;
+				padding: 0 10px;
+			}
+
+			@include tablets {
+				margin-bottom: 40px;
+				flex-basis: 33%;
+			}
+
+			@include phones {
+				margin-bottom: 30px;
+				padding: 0 5px;
+			}
+		}
+
+		&__img-wrap {
+			width: 220px;
+			height: 220px;
+			@extend .align-left;
+
+			@media screen and (max-width: 640px) {
+				width: 180px;
+				height: 180px;
+			}
+
+			@include phones {
+				width: 140px;
+				height: 140px;
+			}
+		}
+	}
+
+	/* Section - Feedback form */
+	.feedback-form {
+		padding-top: 60px;
+		padding-bottom: 70px;
+	}
+}

@@ -1,0 +1,96 @@
+/* =================================
+							FOOTER
+================================= */
+.main-footer {
+
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 10px;
+
+		@include tablets {flex-wrap: wrap;}
+
+		@media screen and (max-width: 540px) {flex-direction: column;}
+	}
+
+	.second-nav {/*+*/
+		border-radius: 0;
+		background-color: #fff;
+
+		@include tablets {
+			background-color: $yellow;
+			padding-right: 60px;/*+*/
+		}
+
+		&__item {/*+*/
+			@include tablets {
+				margin: 0 10px;
+			}
+		}
+	}
+
+	.mobile-menu {/*+*/
+		@include tablets {
+			display: none;
+		}
+	}
+
+	.main-nav__list {/*+*/
+		@include tablets {
+			display: flex;
+			margin-top: 0;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+	}
+
+	.main-nav__item {/*+*/
+		@include tablets {
+			padding: 0;
+			margin: 0 10px;
+		}
+	}
+
+}
+
+.scrollup {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+	background-color: $accent;
+	right: 5%;
+	top: -120%;
+	cursor: pointer;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border-width: 5px 0 0 5px;
+		border-style: solid;
+		border-color: #fff transparent transparent #fff;
+		left: 50%;
+		top: 60%;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	&:hover {
+		background-color: lighten($accent, 10%);
+	}
+
+	@include desktop {/*+*/
+		width: 40px;
+		height: 40px;
+		right: 5%;
+		top: auto;
+		bottom: -45px;
+	}
+
+	@include laptop {/*+*/
+		right: 10px;
+	}
+}
